@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:fyp_project/screens/register_screen.dart';
+import 'package:fyp_project/screens/auth__screen.dart';
+import 'package:get/get.dart';
 
-class GetStartedScreen extends StatelessWidget {
+class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,7 +51,7 @@ class GetStartedScreen extends StatelessWidget {
                       width: 1.8,
                     ),
                     image: const DecorationImage(
-                      image: AssetImage('assets/hand.png'),
+                      image: AssetImage('assets/images/AppLogo.jpeg'),
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -77,8 +78,7 @@ class GetStartedScreen extends StatelessWidget {
                 padding:
                     EdgeInsets.symmetric(horizontal: 20), // Add padding here
                 child: Text(
-                  'Lorem ipsum dolor sit amet consectetur. Eget sit nec et euismod. '
-                  'Consequat urna quam felis interdum quisque. Malesuada adipiscing tristique ut eget sed.',
+                  "Welcome to SignBridge where communication meets accessibility. Our app empowers seamless interaction by converting sign language into text and transforming text into expressive sign language avatars. Whether you're deaf, hard of hearing, or simply want to connect better, we're here to bridge the gap. ",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 16,
@@ -92,14 +92,7 @@ class GetStartedScreen extends StatelessWidget {
               Center(
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => RegisterScreen(
-                          onPressed: () {},
-                        ),
-                      ),
-                    );
+                    Get.to(() => AuthScreen());
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.blue, // Button background color
