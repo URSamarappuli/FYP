@@ -17,7 +17,7 @@ class FirestoreServices {
         'phone number': phoneNumber,
       });
     } catch (e) {
-      print("Error creating user: $e");
+      //print("Error creating user: $e");
     }
   }
 

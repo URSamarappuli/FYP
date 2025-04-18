@@ -3,6 +3,8 @@ import 'package:fyp_project/screens/auth__screen.dart';
 import 'package:get/get.dart';
 
 class WelcomeScreen extends StatelessWidget {
+  const WelcomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -30,7 +30,7 @@ class AuthService {
       return userCredential.user;
     } catch (e) {
       // Handle errors if any occur during the sign-in process
-      print("Google sign-in error: $e");
+      //print("Google sign-in error: $e");
       return null;
     }
   }
