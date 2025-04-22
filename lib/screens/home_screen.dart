@@ -65,12 +65,27 @@ class HomeScreen extends StatelessWidget {
             children: [
               // Top row: Welcome + profile
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
+                  Container(
+                    height: 50, // Adjust height as needed
+                    width: 50, // Adjust width as needed
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage('assets/images/AppLogo.jpeg'),
+                        fit: BoxFit.cover, // Adjust fit as needed
+                      ),
+                    ),
+                  ),
+
+                  SizedBox(width: 10),
+                  // AppBar title
                   Text(
                     "Welcome!",
                     style: appbartitlestyle,
                   ),
+                  Spacer(), // Pushes the profile icon to the right
+                  // Profile icon button
                   IconButton(
                     onPressed: () {
                       // Navigate to ProfileScreen (assuming you have this screen)
